@@ -1,4 +1,33 @@
 :root {
+    --accent-color-blue: #6f9de2;
+    --accent-color-purple: #9871f3;
+    --accent-color-gradient: linear-gradient(
+        90deg,
+        var(--accent-color-blue),
+        var(--accent-color-purple)
+    );
+
+    --feedback-color: #f05d6c;
+
+    --gray-100: #dae4f2;
+    --gray-200: #c8d0da;
+    --gray-300: #95a1b1;
+    --gray-400: #6f7d90;
+    --gray-500: #2a313c;
+    --gray-600: #21252c;
+    --gray-700: #191d24;
+    --gray-800: #13161b;
+    --gray-900: #0f1216;
+
+    --font-heading-lg: 600 2.5rem / 1 "Oxanium", sans-serif;
+    --font-heading-md: 600 1.5rem / 1 "Oxanium", sans-serif;
+    --font-heading-sm: 600 1.25rem / 1 "Oxanium", sans-serif;
+
+    --font-body-md: 400 1rem / 1.6 "Montserrat", sans-serif;
+    --font-body-sm: 400 0.875rem / 1.6 "Montserrat", sans-serif;
+    --font-body-xs: 600 0.75rem / 1.6 "Montserrat", sans-serif;
+
+    --font-button: 600 1rem / 1.6 "Montserrat", sans-serif;
 }
 
 *,
@@ -7,7 +36,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+    height: 100vh;
 }

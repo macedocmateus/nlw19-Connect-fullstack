@@ -42,5 +42,6 @@
 }
 
 body {
-    height: 100vh;
+    background: url("./assets/Background.png") no-repeat center;
+    min-height: 100vh;
 }

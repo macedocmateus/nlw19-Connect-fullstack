@@ -19,7 +19,7 @@ const users = [
         email: "gabi@email.com",
         phone: "99999999999",
         ref: 300,
-        refBy: 100,
+        refBy: 200,
     },
 ];
 
@@ -52,8 +52,13 @@ const showInvite = (userData) => {
 const saveUser = (userData) => {
     const newUser = {
         ...userData,
-        ref: Math.round(Math.random() * 200),
+        ref: Math.round(Math.random() * 4000),
+        refBy: 100,
     };
+
+    users.push(newUser);
+    console.log(users);
+    return newUser;
 };
 
 const formAction = () => {
@@ -93,3 +98,5 @@ const startApp = () => {
 };
 
 startApp();
+
+document.getElementById("logo").onclick = () => startApp();

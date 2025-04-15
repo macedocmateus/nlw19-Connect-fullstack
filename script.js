@@ -61,6 +61,7 @@ const showInvite = (userData) => {
                 </h4>
                 <p>Inscrições feitas</p>
             </section>`;
+    app.setAttribute("class", "page-invite");
 };
 
 const saveUser = (userData) => {
@@ -150,10 +151,17 @@ const startApp = () => {
     `;
 
     app.innerHTML = content;
+    app.setAttribute("class", "page-start");
 
     formAction();
 };
 
 startApp();
+
+// showInvite({
+//     email: "teste@email.com",
+//     phone: "2222222",
+//     ref: 100,
+// });
 
 document.getElementById("logo").onclick = () => startApp();

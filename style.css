@@ -117,7 +117,8 @@ input {
     }
 }
 
-button {
+button,
+button path {
     border: none;
     background-color: var(--gray-500);
     color: var(--accent-color-blue);
@@ -132,11 +133,13 @@ button {
 
     cursor: pointer;
 
-    transition: all 0.2s;
+    transition: all 0.2s, fill 0.1s;
 
-    &:hover {
+    &:hover,
+    &:hover path {
         filter: brightness(1.1);
-        color: var(--gray-500);
+        color: var(--gray-900);
         background-color: var(--accent-color-blue);
+        fill: var(--gray-900);
     }
 }

@@ -39,14 +39,28 @@ const getTotalSubscribers = (userData) => {
 
 const showInvite = (userData) => {
     app.innerHTML = `
-    <input type="text" id="link" value="https://evento.com?ref=${
-        userData.ref
-    }" disabled>
+            <main>
+                <h3>Inscrição confirmada</h3>
 
-    <div id="stats">
-        <h4>${getTotalSubscribers(userData)}</h4>
-        <p>Inscrições feitas</p>
-    </div>`;
+                <p>Convide mais pessoas e concorra a prêmios! <br /> Compartilhe o link e acompanhe as inscrições:
+                </p>
+
+                <div class="input-group">
+                    <label for="link">
+                        <img src="./assets/link.svg" alt="Ícone de link">
+                    </label>
+                    <input type="text" id="link" value="https://evento.com?ref=${
+                        userData.ref
+                    }" disabled>
+                </div>
+            </main>
+
+            <section class="stats">
+                <h4>
+                    ${getTotalSubscribers(userData)}
+                </h4>
+                <p>Inscrições feitas</p>
+            </section>`;
 };
 
 const saveUser = (userData) => {
@@ -85,11 +99,52 @@ const formAction = () => {
 
 const startApp = () => {
     const content = `
-    <form id="form">
-        <input type="email" name="email" placeholder="Email">
-        <input type="tel" name="telefone" placeholder="Telefone">
-        <button>Confirmar</button>
-    </form>
+    <main>
+                <section class="about">
+                    <div class="section-header">
+                        <h2>
+                            Sobre o Evento
+                        </h2>
+                        <span class="badge">AO VIVO</span>
+                    </div>
+
+                    <p>Um evento feito por e para pessoas desenvolvedoras apaixonadas por criar soluções inovadoras e
+                        compartilhar
+                        conhecimento. Vamos mergulhar nas tendências mais recentes em desenvolvimento de software,
+                        arquitetura de sistemas e
+                        tecnologias emergentes, com palestras, workshops e hackathons.
+                        <br /><br />
+                        Dias 15 a 17 de março | Das 18h às 21h | Online &amp; Gratuito
+                    </p>
+                </section>
+
+                <section class="registration">
+                    <h2>Inscrição</h2>
+
+                    <form id="form">
+                        <div class="input-wrapper">
+                            <div class="input-group">
+                                <label for="email">
+                                    <img src="./assets/mail.svg" alt="Ícone de email">
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="E-mail">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="phone">
+                                    <img src="./assets/phone.svg" alt="Ícone de telefone">
+                                </label>
+                                <input type="tel" id="phone" name="phone" placeholder="Telefone">
+                            </div>
+                        </div>
+
+                        <button>
+                            Confirmar
+                            <img src="./assets/arrow-right.svg" alt="Ícone de seta apontando para direita">
+                        </button>
+                    </form>
+                </section>
+            </main>
     `;
 
     app.innerHTML = content;

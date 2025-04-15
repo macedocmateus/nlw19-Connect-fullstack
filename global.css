@@ -30,6 +30,12 @@
     --font-button: 600 1rem / 1.6 "Montserrat", sans-serif;
 }
 
+:root,
+input,
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -44,4 +50,8 @@
 body {
     background: url("./assets/Background.png") no-repeat center;
     min-height: 100vh;
+    color: #e1e1e1;
+    display: grid;
+    place-items: center;
+    padding: 2rem 1rem;
 }

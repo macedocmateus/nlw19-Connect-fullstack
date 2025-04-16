@@ -103,6 +103,15 @@ form {
     }
 }
 
+.input-group button {
+    width: 7.75rem;
+    height: 2.25rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 input {
     background: none;
     border: none;
